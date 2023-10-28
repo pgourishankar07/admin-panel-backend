@@ -11,10 +11,16 @@ import salesRoutes from "./routes/sales.js";
 import managementRoutes from "./routes/management.js";
 
 // data imports
-import { dataUser, dataProduct, dataProductStat } from "./data/index.js";
+import {
+  dataUser,
+  dataProduct,
+  dataProductStat,
+  dataTransaction,
+} from "./data/index.js";
 import User from "./models/User.js";
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
+import Transaction from "./models/Transaction.js";
 
 //CONFIGURATION
 
@@ -49,5 +55,6 @@ mongoose
     // User.insertMany(dataUser); //only one time
     // ProductStat.insertMany(dataProductStat); //only one time
     // Product.insertMany(dataProduct); //only one time
+    // Transaction.insertMany(dataTransaction); //only one time
   })
   .catch((err) => console.log(err, "Did not connect to the DB"));
