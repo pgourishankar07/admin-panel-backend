@@ -26,8 +26,8 @@ const UserSchema = new mongoose.Schema(
     phoneNumber: String,
     transactions: Array,
     role: {
-      type: ["User", "Admin", "SuperAdmin"],
-      default: "Admin",
+      type: ["user", "admin", "superadmin"],
+      default: "admin",
     },
   },
   {
