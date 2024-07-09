@@ -45,9 +45,9 @@ app.use("/management", managementRoutes);
 
 // MONGOOSE SETUP
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(process.env.MONGO_URL, {      //enter the MongoDB Atlas URL
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
